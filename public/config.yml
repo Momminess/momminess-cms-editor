@@ -456,15 +456,17 @@ collections:
         hint: >-
           A cikk címe. Fontos, hogy tartalmazza a cikk fő kulcsszavait a jobb
           SEO érdekében. Pl: Barnázás a 9. héten: Mitől lehet és mit tehetsz
-          ellene?
+          ellene? Hossz: 45-60
+        pattern: ['^.{45,60}$', "Legalább 45, maximum 60 karakter."]
       - name: summary
         label: Összefoglaló
         hint: >-
           Rövid leírás a cikk tartalmáról, ami megjelenik a cikk listában.
           Indexelés szempontjából fontos, hogy ez a rész tartalmazza a cikk fő
-          kulcsszavait.
+          kulcsszavait. Hossz: 130-150
         widget: text
         i18n: true
+        pattern: ['^.{130,150}$', "Legalább 130, maximum 150 karakter."]
       - name: tags
         label: Címkék
         widget: list
@@ -483,7 +485,6 @@ collections:
           - italic
           - link
           - quote
-          - heading-one
           - heading-two
           - heading-three
           - heading-four
@@ -491,8 +492,7 @@ collections:
           - heading-six
           - bulleted-list
           - numbered-list
-        editor_components:
-          - image
+        editor_components: []
         i18n: true
       - label: Gyakori kérdések
         name: faq
